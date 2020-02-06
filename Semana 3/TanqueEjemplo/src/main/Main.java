@@ -1,5 +1,7 @@
 package main;
 
+import java.util.ArrayList;
+
 import processing.core.PApplet;
 import processing.serial.Serial;
 
@@ -10,12 +12,14 @@ public class Main extends PApplet{
 	}
 
 	Tanque tanque;
+	ArrayList<Bala> balas;
 	
 	public void settings() {
 		size(500,500);
 	}
 	
 	public void setup() {
+		balas = new ArrayList<>();
 		tanque = new Tanque(this);
 		printArray(  Serial.list()  );
 	}
@@ -23,6 +27,10 @@ public class Main extends PApplet{
 	public void draw() {
 		background(255);
 		tanque.draw();
+		for(int i=0 ; i<balas.size() ; i++) {
+			balas.get(i).draw();
+			balas.get(i).move();
+		}
 	}
 	
 	public void keyPressed() {
@@ -35,13 +43,15 @@ public class Main extends PApplet{
 		}
 		
 		
-		else if(key == 'A') {
-			tanque.setAngle(PI/4);
-		}else if(key == 'S') {
-			tanque.setAngle(PI/2);
+		else if(key == 'a') {
+			disparar();
 		}
 		
 		
+	}
+
+	private void disparar() {
+		balas.add(new Bala(this, tanque.getPos().x, tanque.getPos().y, tanque.getAngle() ));
 	}
 
 }

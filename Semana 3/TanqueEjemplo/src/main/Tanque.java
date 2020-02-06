@@ -39,5 +39,13 @@ public class Tanque {
 	public void move() {
 		posicion.add(direccion);
 	}
+
+	public float getAngle() {
+		return direccion.heading();
+	}
+
+	public PVector getPos() {
+		return posicion;
+	}
 	
 }
