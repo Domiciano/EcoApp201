@@ -10,7 +10,8 @@ public String getToURL(String site) {
     try {
         URL url = new URL(site);
         HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
-        BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+		InputStreamReader isr = new InputStreamReader(connection.getInputStream());
+		BufferedReader in = new BufferedReader(isr);
         String message = "";
         String line = "";
         while ((line = in.readLine()) != null) {
