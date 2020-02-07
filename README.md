@@ -6,23 +6,23 @@ Bienvenido al curso de Ecosistemas de Aplicaciones. Aquí podrá encontrar los r
 
 ### Método para hacer una consulta por internet
 ```
-    public String getToURL(String site) {
-		try {
-			URL url = new URL(site);
-			HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
-			BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-			String message = "";
-			String line = "";
-			while ((line = in.readLine()) != null) {
-				message += line;
-		    }
-			in.close();
-			return message;
-		}catch(IOException ex) {
-			System.out.println(ex.getMessage());
-			return null;
-		}
-	}
+public String getToURL(String site) {
+    try {
+        URL url = new URL(site);
+        HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
+        BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+        String message = "";
+        String line = "";
+        while ((line = in.readLine()) != null) {
+            message += line;
+        }
+        in.close();
+        return message;
+    }catch(IOException ex) {
+        System.out.println(ex.getMessage());
+        return null;
+    }
+}
 ```
 
 ### Elementos para comprar
