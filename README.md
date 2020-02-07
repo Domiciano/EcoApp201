@@ -4,6 +4,27 @@
 
 Bienvenido al curso de Ecosistemas de Aplicaciones. Aquí podrá encontrar los recursos del curso.
 
+### Método para hacer una consulta por internet
+```
+    public String getToURL(String site) {
+		try {
+			URL url = new URL(site);
+			HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
+			BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+			String message = "";
+			String line = "";
+			while ((line = in.readLine()) != null) {
+				message += line;
+		    }
+			in.close();
+			return message;
+		}catch(IOException ex) {
+			System.out.println(ex.getMessage());
+			return null;
+		}
+	}
+```
+
 ### Elementos para comprar
 - Protoboard grande (1 x Grupo)
 - Resistencias de 220ohm / 240ohm (12 x Grupo)
