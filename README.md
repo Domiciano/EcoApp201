@@ -1,8 +1,14 @@
-![Universidad Icesi](https://www.icesi.edu.co/launiversidad/images/La_universidad/logosimbolos/Logo_icesi_JPG.jpg)
+﻿![Universidad Icesi](https://www.icesi.edu.co/launiversidad/images/La_universidad/logosimbolos/Logo_icesi_JPG.jpg)
 # ECOSISTEMAS DE APLICACIONES
 ### Semestre 2020-1
 
 Bienvenido al curso de Ecosistemas de Aplicaciones. Aquí podrá encontrar los recursos del curso.
+
+
+### Calendario de entregas
+(Semana 8) Lunes, marzo 9: Propuesta de diseño y ficha técnica 
+ 
+(Semana 10) Domingo, marzo 29: Código implementado 
 
 ### Método para hacer una consulta por internet
 ```
