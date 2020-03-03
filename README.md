@@ -25,11 +25,9 @@ writer.flush();
 
 ### Inicializar lector de datos (Ambos)
 ```
-    InputStream is = socket.getInputStream();
-            
-    InputStreamReader isr = new InputStreamReader(is);
-          
-    BufferedReader reader = new BufferedReader(isr);
+InputStream is = socket.getInputStream();
+InputStreamReader isr = new InputStreamReader(is);
+BufferedReader reader = new BufferedReader(isr);
             
 ```
 
@@ -49,18 +47,18 @@ try {
 
 ### Pedir conexiones (Cliente)
 ```
-    Socket socket = new Socket("10.0.2.2", 5000);
+Socket socket = new Socket("10.0.2.2", 5000);
 ```
 
 
 
 ### Recibir conexiones (Servidor)
 ```
-    ServerSocket server = new ServerSocket(5000);
-    //Esta linea me permite aceptar la conexion entrante
-    System.out.println("Esperando...");
-    Socket socket = server.accept();
-    System.out.println("Conexion fue aceptada");
+ServerSocket server = new ServerSocket(5000);
+//Esta linea me permite aceptar la conexion entrante
+System.out.println("Esperando...");
+Socket socket = server.accept();
+System.out.println("Conexion fue aceptada");
 ```
 
 
