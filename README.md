@@ -10,6 +10,60 @@ Bienvenido al curso de Ecosistemas de Aplicaciones. Aquí podrá encontrar los r
  
 (Semana 10) Domingo, marzo 29: Código implementado 
 
+
+### Recibir líneas
+```
+String line = reader.readLine();
+System.out.println(line);
+```
+
+### Mandar lineas
+```
+writer.write("Hola desde Android\n");
+writer.flush();
+```
+
+### Inicializar lector de datos (Ambos)
+```
+    InputStream is = socket.getInputStream();
+            
+    InputStreamReader isr = new InputStreamReader(is);
+          
+    BufferedReader reader = new BufferedReader(isr);
+            
+```
+
+### Inicializar escritor de datos (Ambos)
+```
+try {
+    //Estamos definiciendo la corriente de salida
+    OutputStream os = socket.getOutputStream();
+    //Como necesitamos mandar Strings, entonces vamos a definir los siguientes objetos
+    OutputStreamWriter osw = new OutputStreamWriter(os);
+    //Esta linea nos permite crear un objeto que manda Strings pero con un buffer
+    BufferedWriter writer = new BufferedWriter(osw);
+} catch (IOException e) {
+    e.printStackTrace();
+}
+```
+
+### Pedir conexiones (Cliente)
+```
+    Socket socket = new Socket("10.0.2.2", 5000);
+```
+
+
+
+### Recibir conexiones (Servidor)
+```
+    ServerSocket server = new ServerSocket(5000);
+    //Esta linea me permite aceptar la conexion entrante
+    System.out.println("Esperando...");
+    Socket socket = server.accept();
+    System.out.println("Conexion fue aceptada");
+```
+
+
 ### Método para hacer una consulta por internet
 ```
 public String getToURL(String site) {
