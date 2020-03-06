@@ -1,5 +1,8 @@
 package appmoviles.com.tcpclienteavanzado;
 
+import android.content.Intent;
+import android.widget.Toast;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -10,6 +13,8 @@ import java.io.OutputStreamWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class ComunicacionTCP extends Thread{
 
     private Socket socket;
@@ -17,6 +22,11 @@ public class ComunicacionTCP extends Thread{
     private BufferedWriter writer;
     private String ip;
 
+    private AppCompatActivity app;
+
+    public ComunicacionTCP(AppCompatActivity app){
+        this.app = app;
+    }
 
     //Hilo de recepción
     @Override
@@ -71,6 +81,19 @@ public class ComunicacionTCP extends Thread{
     public void recibirMensaje() throws IOException{
         String line = reader.readLine();
         System.out.println("<<<"+line);
+        if(line.equals("SI")){
+            Intent i = new Intent(app, MainActivity.class);
+            app.startActivity(i);
+        }
+        if(line.equals("NO")){
+            //CUMPLE CON LAS REGLAS DE ANDROID!
+            app.runOnUiThread(
+                    ()->{
+                        Toast.makeText(app, "El correo esta MAL", Toast.LENGTH_SHORT).show();
+                    }
+            );
+
+        }
     }
 
     public void cerrarConexion(){
