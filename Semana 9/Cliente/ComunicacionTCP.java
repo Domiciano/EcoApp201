@@ -1,4 +1,4 @@
-package appmoviles.com.tcpclienteavanzado;
+package appmoviles.com.clientesingleton;
 
 import android.content.Intent;
 import android.widget.Toast;
@@ -22,16 +22,14 @@ public class ComunicacionTCP extends Thread{
     private BufferedWriter writer;
     private String ip;
 
-    private AppCompatActivity app;
-
     private OnMessageListener observer;
 
     public void setObserver(OnMessageListener observer){
         this.observer = observer;
     }
 
-    public ComunicacionTCP(AppCompatActivity app){
-        this.app = app;
+    public ComunicacionTCP(){
+
     }
 
     //Hilo de recepción

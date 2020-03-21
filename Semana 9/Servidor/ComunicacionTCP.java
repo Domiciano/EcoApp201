@@ -1,4 +1,4 @@
-package comm;
+package main;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -14,7 +14,11 @@ public class ComunicacionTCP extends Thread{
 	private Socket socket;
     private BufferedReader reader;
     private BufferedWriter writer;
-
+    private OnMessageListener observer;
+    
+    public void setObserver(OnMessageListener observer){
+        this.observer = observer;
+    }
     
     //Hilo de recepción
     @Override
@@ -70,7 +74,7 @@ public class ComunicacionTCP extends Thread{
     //Recibir mensaje
     public void recibirMensaje() throws IOException{
     	String line = reader.readLine();
-    	System.out.println("<<<"+line);
+    	if(observer!=null) observer.onMessage(line);
     }
 
     public void cerrarConexion(){
@@ -84,7 +88,10 @@ public class ComunicacionTCP extends Thread{
     
     
     
-    
+    public interface OnMessageListener{
+        void onMessage(String mensaje);
+    }
+
     
     
     
