@@ -6,9 +6,8 @@ Bienvenido al curso de Ecosistemas de Aplicaciones. Aquí podrá encontrar los r
 
 
 ### Calendario de entregas
-(Semana 8) Lunes, marzo 9: Propuesta de diseño y ficha técnica 
- 
-(Semana 10) Domingo, marzo 29: Código implementado 
+(Semana 10) Jueves, Exposición online o
+(Semana 11) Jueves, Exposición online (después de semana santa)
 
 
 ### Recibir líneas
