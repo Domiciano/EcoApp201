@@ -4,6 +4,11 @@
 
 Bienvenido al curso de Ecosistemas de Aplicaciones. Aquí podrá encontrar los recursos del curso.
 
+### SEMANA 9
+https://github.com/Domiciano/ListasSimples
+https://github.com/Domiciano/ListasIntermedio
+https://github.com/Domiciano/ClienteSingleton
+
 
 ### Examen teórico 1
 [![Examen de prerrequisitos](http://www.iconninja.com/files/825/688/946/pencil-list-done-checkmark-todo-exam-icon.png)](https://forms.gle/5EQ4p1rUEfXTxLFq5)
