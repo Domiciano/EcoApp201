@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Registro de estudiantes</title>
+        <link href="css/estilo.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+
+
+        <div id="bloqueregistro">
+            <img src="https://www.icesi.edu.co/launiversidad/images/La_universidad/logo_icesi.png" height="60">
+            <h3>Registro de estudiantes</h3>
+            <p><input type="text" placeholder="Nombre de estudiante" id="firstnameIT"></p>
+            <p><input type="text" placeholder="Apellido de estudiante" id="secondnameIT"></p>
+            <p><input type="text" placeholder="Código de estudiante" id="codeIT"></p>
+
+            <h4>Elige un avatar</h4>
+            <p>
+                <img class="avatar" src="img/u1.jpg" width="96">
+                <img class="avatar" src="img/u2.jpg" width="96">
+                <img class="avatar" src="img/u3.jpg" width="96">
+                <img class="avatar" src="img/u4.jpg" width="96">
+            </p>
+            <p>
+                <img class="avatar" src="img/u5.jpg" width="96">
+                <img class="avatar" src="img/u6.jpg" width="96">
+                <img class="avatar" src="img/u7.jpg" width="96">
+                <img class="avatar" src="img/u8.jpg" width="96">
+            </p>
+
+
+            <p><button id="registerBtn">Registrar</button></p>
+        </div>
+
+        <div id="listaestudiantes">
+            <!-- Crear un contenedor -->
+            <h3>Lista de estudiantes</h3>
+            <ol id="contenedorBase">
+
+            </ol>
+        </div>
+
+    </body>
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
+    <script type="text/javascript" src="js/model/estudiante.js"></script>
+    <script type="text/javascript" src="js/control/functions.js"></script>
+    
+
+</html>

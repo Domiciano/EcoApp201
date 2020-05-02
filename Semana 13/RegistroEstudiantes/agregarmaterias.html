@@ -1,0 +1,29 @@
+<html>
+
+    <head>
+        <title>Agregar materia</title>
+    </head>
+
+    <body>
+
+        <h3 id="estudiantenombre">Cargando...</h3>
+
+        <p><input type="text" id="nombreIT"></p>
+        <p><input type="text" id="profesorIT"></p>
+        <p><button id="registrarBtn">Registrar</button></p>
+
+
+        <h4>Materias matriculadas</h4>
+        <ol id="materiasContainer"></ol>
+
+
+    </body>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
+    <script type="text/javascript" src="js/model/estudiante.js"></script>
+    <script type="text/javascript" src="js/model/materia.js"></script>
+    <script type="text/javascript" src="js/control/agregarmaterias.js"></script>
+
+
+</html>

@@ -1,0 +1,45 @@
+>>>ActivityMain<<<
+
+Variables
+
+private ImageView icesiLogo, img1, img2, img3, img4, img5, img6, img7, img8;
+private EditText nombreET, apellidoET, codigoET;
+private Button registrarBTN, listaBTN;
+
+Asignaciones
+
+icesiLogo = findViewById(R.id.icesiLogo);
+img1 = findViewById(R.id.img1);
+img2 = findViewById(R.id.img2);
+img3 = findViewById(R.id.img3);
+img4 = findViewById(R.id.img4);
+img5 = findViewById(R.id.img5);
+img6 = findViewById(R.id.img6);
+img7 = findViewById(R.id.img7);
+img8 = findViewById(R.id.img8);
+nombreET = findViewById(R.id.nombreET);
+apellidoET = findViewById(R.id.apellidoET);
+codigoET = findViewById(R.id.codigoET);
+registrarBTN = findViewById(R.id.registrarBTN);
+listaBTN = findViewById(R.id.listaBTN);
+
+
+>>>EstudiantePefilActivity<<<
+
+Variables
+
+private ImageView profileImg;
+private TextView profileTitle;
+private EditText nombreMatET;
+private EditText nombreProfET;
+private Button registroBTN;
+private TextView materiasTV;
+
+Asignaciones
+
+profileImg = findViewById(R.id.profileImg);
+profileTitle = findViewById(R.id.profileTitle);
+nombreMatET = findViewById(R.id.nombreMatET);
+nombreProfET = findViewById(R.id.nombreProfET);
+registroBTN = findViewById(R.id.registroBTN);
+materiasTV = findViewById(R.id.materiasTV);
